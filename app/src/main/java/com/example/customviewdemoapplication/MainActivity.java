@@ -15,14 +15,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        myView = (MyView)findViewById(R.id.customView);
-
-        findViewById(R.id.swapColor).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                myView.swapColor();
-            }
-        });
 
 
     }

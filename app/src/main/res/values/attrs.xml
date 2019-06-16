@@ -6,4 +6,13 @@
         <attr name="square_size" format="dimension"/>
     </declare-styleable>
 
+
+    <declare-styleable name="RoomTypeView">
+        <attr name="text" format="string"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="ic_increment" format="reference"/>
+        <attr name="ic_decrement" format="reference"/>
+
+    </declare-styleable>
+
 </resources>

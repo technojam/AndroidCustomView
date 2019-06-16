@@ -8,19 +8,9 @@
     tools:context=".MainActivity"
     tools:ignore="ResAuto">
 
-    <com.example.customviewdemoapplication.Views.MyView
-        android:id="@+id/customView"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        app:square_color="@color/colorPrimaryDark"
-        app:square_size="100dp" />
-
-    <Button
-        android:id="@+id/swapColor"
+    <com.example.customviewdemoapplication.Views.RoomTypeView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/customView"
-        android:text="Swap Color" />
+        android:layout_height="wrap_content"/>
 
 
 
