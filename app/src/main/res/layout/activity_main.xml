@@ -10,7 +10,10 @@
 
     <com.example.customviewdemoapplication.Views.RoomTypeView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="50dp"
+        app:leftGap="20dp"
+        app:text="Hello"
+        app:textSize="20sp"/>
 
 
 
