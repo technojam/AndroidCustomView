@@ -2,6 +2,7 @@ package com.example.customviewdemoapplication.Views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Canvas;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -11,10 +12,9 @@ import com.example.customviewdemoapplication.R;
 public class RoomTypeView extends View {
 
     String mText;
-    int mCounter;
-    int mIcIncrement;
-    int mIcDecrement;
-    
+    int mCounter = 0;
+
+
 
 
     public RoomTypeView(Context context, @Nullable AttributeSet attrs) {
@@ -25,8 +25,13 @@ public class RoomTypeView extends View {
     private void init(AttributeSet attrs){
         TypedArray typedArray = getResources().obtainAttributes(attrs, R.styleable.RoomTypeView);
 
+        mText = typedArray.getString(R.styleable.RoomTypeView_text);
+
+
     }
 
+    @Override
+    protected void onDraw(Canvas canvas) {
 
-
+    }
 }
