@@ -12,8 +12,12 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         app:leftGap="20dp"
-        app:text="Hello"
-        app:textSize="20sp"/>
+        app:text="HELLO"
+        app:textSize="20sp"
+        app:textLeftGap="20dp"
+        app:textColor="#7C7070"
+        app:counterTextColor="#000000"
+        app:numberPickerRightGap="-10dp"/>
 
 
 
