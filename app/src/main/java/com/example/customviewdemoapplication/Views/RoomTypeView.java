@@ -7,6 +7,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Picture;
+import android.graphics.Typeface;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -70,6 +71,10 @@ public class RoomTypeView extends View {
         mPaintText.setColor(mTextColor);
         mPaintText.setTextSize(mTextSize);
 
+        Typeface thin = Typeface.create("normal", Typeface.BOLD);
+
+        //mPaintText.setTypeface(thin);
+
         mPaintCounterText = new Paint();
         mPaintCounterText.setColor(mCounterTextColor);
         mPaintCounterText.setTextSize(mTextSize);
@@ -131,5 +136,7 @@ public class RoomTypeView extends View {
         return value;
     }
 
-    
+    public int getmCounter() {
+        return mCounter;
+    }
 }

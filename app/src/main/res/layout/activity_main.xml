@@ -9,6 +9,7 @@
     tools:ignore="ResAuto">
 
     <com.example.customviewdemoapplication.Views.RoomTypeView
+        android:id="@+id/roomTypeView"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         app:leftGap="20dp"
@@ -18,6 +19,13 @@
         app:textColor="#7C7070"
         app:counterTextColor="#000000"
         app:numberPickerRightGap="-10dp"/>
+
+    <Button
+        android:id="@+id/getButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/roomTypeView"
+        android:text="Get"/>
 
 
 
