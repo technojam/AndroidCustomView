@@ -36,7 +36,9 @@
         android:layout_height="50dp"
         app:bgColor="#000000"
         app:fgColor="@color/colorPrimary"
-        app:percentage="5000"/>
+        app:percentage="50"
+        app:value="240"
+        app:valueSize="30dp"/>
 
 
 

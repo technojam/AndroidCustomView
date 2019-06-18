@@ -25,6 +25,7 @@
         <attr name="fgColor" format="color"/>
         <attr name="percentage" format="float"/>
         <attr name="valueLeftGap" format="dimension"/>
+        <attr name="valueSize" format="dimension"/>
 
     </declare-styleable>
 
