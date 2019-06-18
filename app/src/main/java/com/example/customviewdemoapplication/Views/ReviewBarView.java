@@ -8,6 +8,7 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.Pair;
 import android.view.View;
 
@@ -40,6 +41,8 @@ public class ReviewBarView extends View {
         mFgColor = typedArray.getInteger(R.styleable.ReviewBarView_fgColor, R.color.colorPrimary);
         mPercentage = typedArray.getFloat(R.styleable.ReviewBarView_percentage, 50f);
 
+        typedArray.recycle();
+
         mRectBar = new Rect();
         mRectProgress = new Rect();
 
@@ -48,6 +51,8 @@ public class ReviewBarView extends View {
 
         mPaintBar.setColor(mBgColor);
         mPaintProgress.setColor(mFgColor);
+
+
 
     }
 
@@ -58,6 +63,27 @@ public class ReviewBarView extends View {
         mRectBar.bottom = mRectBar.top + getHeight();
         mRectBar.right = mRectBar.left + getWidth();
 
+
+        mRectProgress.top = 0;
+        mRectProgress.left = 0;
+        mRectProgress.bottom = mRectProgress.top + getHeight();
+        mRectProgress.right = mRectProgress.left + getProgressWidth();
+
+
         canvas.drawRect(mRectBar, mPaintBar);
+        canvas.drawRect(mRectProgress, mPaintProgress);
+    }
+
+    private int getProgressWidth(){
+
+        int progressWidth;
+
+        if (mPercentage<=100 && mPercentage>=0){
+            progressWidth = (int)(getWidth()*mPercentage/100);
+        }else{
+            progressWidth = 0;
+        }
+
+        return progressWidth;
     }
 }
