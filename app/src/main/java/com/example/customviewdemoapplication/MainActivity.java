@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final RoomTypeView roomTypeView = (RoomTypeView)findViewById(R.id.roomTypeView);
+        /*final RoomTypeView roomTypeView = (RoomTypeView)findViewById(R.id.roomTypeView);
         Button get = (Button)findViewById(R.id.getButton);
 
         get.setOnClickListener(new View.OnClickListener() {
@@ -27,7 +27,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this, ""+roomTypeView.getmCounter(), Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
+
+
 
 
 

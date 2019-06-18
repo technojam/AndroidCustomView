@@ -20,11 +20,11 @@
 
     <declare-styleable name="ReviewBarView">
 
-        <attr name="text" format="string"/>
+        <attr name="value" format="string"/>
         <attr name="bgColor" format="color"/>
         <attr name="fgColor" format="color"/>
-        <attr name="percentage" format="color"/>
-        <attr name="textLeftGap" format="dimension"/>
+        <attr name="percentage" format="float"/>
+        <attr name="valueLeftGap" format="dimension"/>
 
     </declare-styleable>
 
