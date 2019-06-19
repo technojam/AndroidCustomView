@@ -28,6 +28,7 @@
         <attr name="percentage" format="float"/>
         <attr name="margin_left" format="dimension"/>
         <attr name="margin_right" format="dimension"/>
+        <attr name="bar_width" format="dimension"/>
 
 
 

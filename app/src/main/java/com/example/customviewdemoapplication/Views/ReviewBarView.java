@@ -17,7 +17,7 @@ public class ReviewBarView extends View {
     final static int LEFT_GAP = 350;
     static float RIGHT_GAP = 100;
     final static int RECT_HEIGHT = 20;
-    final static int RECT_WIDTH = 600;
+    static int RECT_WIDTH = 600;
 
     float mTextLeftGap;
 
@@ -51,7 +51,7 @@ public class ReviewBarView extends View {
         mStringStart = typedArray.getString(R.styleable.ReviewBarView_string_start);
         mStringEnd = typedArray.getString(R.styleable.ReviewBarView_string_end);
         mStringColor = typedArray.getColor(R.styleable.ReviewBarView_string_color, Color.BLACK);
-
+        RECT_WIDTH = (int) typedArray.getDimension(R.styleable.ReviewBarView_bar_width, 600);
         typedArray.recycle();
 
         mRectBar = new Rect();

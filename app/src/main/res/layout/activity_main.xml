@@ -38,10 +38,11 @@
         app:fgColor="@color/colorPrimary"
         app:percentage="50"
         app:margin_left="12dp"
-        app:margin_right="50dp"
+        app:margin_right="70dp"
         app:string_start="Excellent"
         app:string_end="300"
-        app:string_color="@color/colorPrimaryDark"/>
+        app:string_color="@color/colorPrimaryDark"
+        app:bar_width="200dp"/>
 
 
 
