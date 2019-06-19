@@ -16,16 +16,13 @@ import com.example.customviewdemoapplication.R;
 
 public class ReviewBarView extends View {
 
-    final static int GAP = 50;
-    final static int RIGHT_GAP = 300;
 
     int mBgColor, mFgColor;
     float mPercentage, mTextSize;
-    String mText;
 
     Paint mPaintBar;
     Paint mPaintProgress;
-    Paint mPaintText;
+
 
     Rect mRectBar;
     Rect mRectProgress;
@@ -43,8 +40,6 @@ public class ReviewBarView extends View {
         mBgColor = typedArray.getInteger(R.styleable.ReviewBarView_bgColor, R.color.grey);
         mFgColor = typedArray.getInteger(R.styleable.ReviewBarView_fgColor, R.color.colorPrimary);
         mPercentage = typedArray.getFloat(R.styleable.ReviewBarView_percentage, 50f);
-        mText = typedArray.getString(R.styleable.ReviewBarView_value);
-        mTextSize = typedArray.getDimension(R.styleable.ReviewBarView_valueSize, 30f);
 
         typedArray.recycle();
 
@@ -53,12 +48,11 @@ public class ReviewBarView extends View {
 
         mPaintBar = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaintProgress = new Paint(Paint.ANTI_ALIAS_FLAG);
-        mPaintText = new Paint();
+
 
         mPaintBar.setColor(mBgColor);
         mPaintProgress.setColor(mFgColor);
-        mPaintText.setColor(Color.BLACK);
-        mPaintText.setTextSize(mTextSize);
+
 
 
 
@@ -70,7 +64,7 @@ public class ReviewBarView extends View {
         mRectBar.top = 0;
         mRectBar.left = 0;
         mRectBar.bottom = mRectBar.top + getHeight();
-        mRectBar.right = mRectBar.left + getWidth()- RIGHT_GAP;
+        mRectBar.right = mRectBar.left + getWidth();
 
 
         mRectProgress.top = 0;
@@ -81,7 +75,7 @@ public class ReviewBarView extends View {
 
         canvas.drawRect(mRectBar, mPaintBar);
         canvas.drawRect(mRectProgress, mPaintProgress);
-        canvas.drawText(mText, mRectBar.width()+GAP, getHeight()/2 + mTextSize/2, mPaintText);
+
     }
 
     private int getProgressWidth(){

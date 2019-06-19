@@ -33,12 +33,11 @@
 
     <com.example.customviewdemoapplication.Views.ReviewBarView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="10dp"
         app:bgColor="#000000"
         app:fgColor="@color/colorPrimary"
         app:percentage="50"
-        app:value="240"
-        app:valueSize="30dp"/>
+        />
 
 
 
