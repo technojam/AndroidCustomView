@@ -37,9 +37,11 @@
         app:bgColor="#000000"
         app:fgColor="@color/colorPrimary"
         app:percentage="50"
-        android:layout_marginTop="50dp"
         app:margin_left="12dp"
-        app:marging_right="50dp"/>
+        app:margin_right="50dp"
+        app:string_start="Excellent"
+        app:string_end="300"
+        app:string_color="@color/colorPrimaryDark"/>
 
 
 

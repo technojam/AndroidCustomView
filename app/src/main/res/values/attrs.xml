@@ -20,12 +20,15 @@
 
     <declare-styleable name="ReviewBarView">
 
+        <attr name="string_start" format="string"/>
+        <attr name="string_end" format="string"/>
+        <attr name="string_color" format="color"/>
         <attr name="bgColor" format="color"/>
         <attr name="fgColor" format="color"/>
         <attr name="percentage" format="float"/>
         <attr name="margin_left" format="dimension"/>
         <attr name="margin_right" format="dimension"/>
-        
+
 
 
     </declare-styleable>

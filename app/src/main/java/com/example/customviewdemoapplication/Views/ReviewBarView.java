@@ -21,7 +21,8 @@ public class ReviewBarView extends View {
 
     float mTextLeftGap;
 
-    int mBgColor, mFgColor;
+    String mStringStart, mStringEnd;
+    int mBgColor, mFgColor, mStringColor;
     float mPercentage;
 
     Paint mPaintBar;
@@ -46,7 +47,10 @@ public class ReviewBarView extends View {
         mFgColor = typedArray.getInteger(R.styleable.ReviewBarView_fgColor, R.color.colorPrimary);
         mPercentage = typedArray.getFloat(R.styleable.ReviewBarView_percentage, 50f);
         mTextLeftGap = typedArray.getDimension(R.styleable.ReviewBarView_margin_left, LEFT_GAP/4);
-        RIGHT_GAP = typedArray.getDimension(R.styleable.ReviewBarView_marging_right, 100);
+        RIGHT_GAP = typedArray.getDimension(R.styleable.ReviewBarView_margin_right, 100);
+        mStringStart = typedArray.getString(R.styleable.ReviewBarView_string_start);
+        mStringEnd = typedArray.getString(R.styleable.ReviewBarView_string_end);
+        mStringColor = typedArray.getColor(R.styleable.ReviewBarView_string_color, Color.BLACK);
 
         typedArray.recycle();
 
@@ -62,7 +66,7 @@ public class ReviewBarView extends View {
         mPaintProgress.setColor(mFgColor);
 
         mPaintText.setTextSize(30);
-        mPaintText.setColor(Color.BLACK);
+        mPaintText.setColor(mStringColor);
 
 
 
@@ -87,8 +91,8 @@ public class ReviewBarView extends View {
         canvas.drawRect(mRectBar, mPaintBar);
         canvas.drawRect(mRectProgress, mPaintProgress);
 
-        canvas.drawText("Excellent", mTextLeftGap, getHeight()/2 + RECT_HEIGHT/2, mPaintText);
-        canvas.drawText("240", mRectBar.right + 10, getHeight()/2 + RECT_HEIGHT/2, mPaintText);
+        canvas.drawText(mStringStart, mTextLeftGap, getHeight()/2 + RECT_HEIGHT/2, mPaintText);
+        canvas.drawText(mStringEnd, mRectBar.right + 10, getHeight()/2 + RECT_HEIGHT/2, mPaintText);
 
     }
 
