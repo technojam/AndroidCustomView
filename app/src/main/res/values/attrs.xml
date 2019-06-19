@@ -23,6 +23,9 @@
         <attr name="bgColor" format="color"/>
         <attr name="fgColor" format="color"/>
         <attr name="percentage" format="float"/>
+        <attr name="margin_left" format="dimension"/>
+        <attr name="margin_right" format="dimension"/>
+        
 
 
     </declare-styleable>

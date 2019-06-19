@@ -8,20 +8,25 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.util.Pair;
 import android.view.View;
 
 import com.example.customviewdemoapplication.R;
 
 public class ReviewBarView extends View {
 
+    final static int LEFT_GAP = 350;
+    static float RIGHT_GAP = 100;
+    final static int RECT_HEIGHT = 20;
+    final static int RECT_WIDTH = 600;
+
+    float mTextLeftGap;
 
     int mBgColor, mFgColor;
-    float mPercentage, mTextSize;
+    float mPercentage;
 
     Paint mPaintBar;
     Paint mPaintProgress;
+    Paint mPaintText;
 
 
     Rect mRectBar;
@@ -40,6 +45,8 @@ public class ReviewBarView extends View {
         mBgColor = typedArray.getInteger(R.styleable.ReviewBarView_bgColor, R.color.grey);
         mFgColor = typedArray.getInteger(R.styleable.ReviewBarView_fgColor, R.color.colorPrimary);
         mPercentage = typedArray.getFloat(R.styleable.ReviewBarView_percentage, 50f);
+        mTextLeftGap = typedArray.getDimension(R.styleable.ReviewBarView_margin_left, LEFT_GAP/4);
+        RIGHT_GAP = typedArray.getDimension(R.styleable.ReviewBarView_marging_right, 100);
 
         typedArray.recycle();
 
@@ -48,10 +55,14 @@ public class ReviewBarView extends View {
 
         mPaintBar = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaintProgress = new Paint(Paint.ANTI_ALIAS_FLAG);
+        mPaintText = new Paint(Paint.ANTI_ALIAS_FLAG);
 
 
         mPaintBar.setColor(mBgColor);
         mPaintProgress.setColor(mFgColor);
+
+        mPaintText.setTextSize(30);
+        mPaintText.setColor(Color.BLACK);
 
 
 
@@ -61,20 +72,23 @@ public class ReviewBarView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        mRectBar.top = 0;
-        mRectBar.left = 0;
-        mRectBar.bottom = mRectBar.top + getHeight();
-        mRectBar.right = mRectBar.left + getWidth();
+        mRectBar.top = getHeight()/2 - RECT_HEIGHT/2;
+        mRectBar.left = getWidth() - RECT_WIDTH - (int)RIGHT_GAP;
+        mRectBar.bottom = mRectBar.top + RECT_HEIGHT;
+        mRectBar.right = mRectBar.left + RECT_WIDTH;
 
 
-        mRectProgress.top = 0;
-        mRectProgress.left = 0;
-        mRectProgress.bottom = mRectProgress.top + getHeight();
+        mRectProgress.top = mRectBar.top;
+        mRectProgress.left = mRectBar.left;
+        mRectProgress.bottom = mRectBar.bottom;
         mRectProgress.right = mRectProgress.left + getProgressWidth();
 
 
         canvas.drawRect(mRectBar, mPaintBar);
         canvas.drawRect(mRectProgress, mPaintProgress);
+
+        canvas.drawText("Excellent", mTextLeftGap, getHeight()/2 + RECT_HEIGHT/2, mPaintText);
+        canvas.drawText("240", mRectBar.right + 10, getHeight()/2 + RECT_HEIGHT/2, mPaintText);
 
     }
 
