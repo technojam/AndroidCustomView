@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -51,6 +52,11 @@ public class MessageBox extends View {
         path.lineTo(0, 100);
         path.lineTo(0, 0);
          */
+
+        RectF oval = new RectF();
+
+        path.addArc(0f, 0f, (0+500), (0+500), 180+40, 45);
+
 
         canvas.drawPath(path, paint);
     }
