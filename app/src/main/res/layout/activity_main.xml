@@ -47,7 +47,7 @@
 
         -->
 
-    <com.example.customviewdemoapplication.Views.MyView
+    <com.example.customviewdemoapplication.Views.MessageBox
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
