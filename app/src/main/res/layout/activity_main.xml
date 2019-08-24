@@ -44,7 +44,6 @@
         app:string_end="300"
         app:string_color="@color/colorPrimaryDark"
         app:bar_width="200dp"/>
-
         -->
 
     <com.example.customviewdemoapplication.Views.MessageBox
