@@ -75,6 +75,16 @@ public class ReviewBarView extends View {
     }
 
     @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        if(widthMeasureSpec == MeasureSpec.AT_MOST){
+            setMeasuredDimension(getWidth(), getSuggestedMinimumHeight());
+        }
+
+    }
+
+    @Override
     protected void onDraw(Canvas canvas) {
         mRectBar.top = getHeight()/2 - RECT_HEIGHT/2;
         mRectBar.left = getWidth() - RECT_WIDTH - (int)RIGHT_GAP;
@@ -90,6 +100,7 @@ public class ReviewBarView extends View {
 
         canvas.drawRect(mRectBar, mPaintBar);
         canvas.drawRect(mRectProgress, mPaintProgress);
+
 
         canvas.drawText(mStringStart, mTextLeftGap, getHeight()/2 + RECT_HEIGHT/2, mPaintText);
         canvas.drawText(mStringEnd, mRectBar.right + 10, getHeight()/2 + RECT_HEIGHT/2, mPaintText);
