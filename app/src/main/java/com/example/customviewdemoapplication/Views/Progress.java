@@ -54,7 +54,7 @@ public class Progress extends View {
         int correction = 200;
         Paint paint2 = new Paint();
         paint2.setColor(Color.BLUE);
-        paint2.setTextSize(520);
+        paint2.setTextSize(50);
         paint2.setTextAlign(Paint.Align.CENTER);
 
 
