@@ -2,16 +2,12 @@ package com.example.customviewdemoapplication.Views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Picture;
 import android.graphics.Typeface;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.util.Pair;
 import android.view.MotionEvent;
 import android.view.View;
 

@@ -1,14 +1,11 @@
 package com.example.customviewdemoapplication;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
-import android.widget.Toolbar;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 
 import com.example.customviewdemoapplication.Views.MyView;
-import com.example.customviewdemoapplication.Views.RoomTypeView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +25,13 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, ""+roomTypeView.getmCounter(), Toast.LENGTH_SHORT).show();
             }
         });*/
+
+        AutoCompleteTextView textView = (AutoCompleteTextView) findViewById(R.id.autoCompleteCountry); // get a reference to the autocomplete in the layout
+
+        String[] countries = getResources().getStringArray(R.array.countries_array);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,countries);
+        textView.setAdapter(adapter);
 
 
 

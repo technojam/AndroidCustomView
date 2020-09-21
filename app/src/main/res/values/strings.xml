@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">CustomViewDemoApplication</string>
+    <string-array name="countries_array">
+        <item>Afghanistan</item>
+        <item>Albania</item>
+        <item>Algeria</item>
+        <item>American Samoa</item>
+        <item>Andorra</item>
+        <item>Angola</item>
+        <item>Anguilla</item>
+        <item>Antarctica</item>
+        <item>India</item>
+    </string-array>
+
 </resources>
