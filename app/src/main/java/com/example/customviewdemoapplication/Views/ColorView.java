@@ -52,7 +52,6 @@ public class ColorView extends View {
         }else if(mPaintSquare.getColor() == Color.YELLOW) {
             mPaintSquare.setColor(Color.GREEN);
         }
-        //mPaintSquare.setColor(mPaintSquare.getColor() == Color.GREEN ? Color.RED : Color.GREEN);
         postInvalidate();
     }
 
