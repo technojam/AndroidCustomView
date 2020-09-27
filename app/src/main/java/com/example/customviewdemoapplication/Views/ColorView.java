@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 
 public class ColorView extends View {
 
-    private static final int SQUARE_SIZE = 100;
+    private static final int SQUARE_SIZE = 200;
     private Rect mRectSquare;
     private Paint mPaintSquare;
 
@@ -38,6 +38,22 @@ public class ColorView extends View {
     public void init(@Nullable AttributeSet set){
         mRectSquare = new Rect();
         mPaintSquare = new Paint(Paint.ANTI_ALIAS_FLAG);
+        mPaintSquare.setColor(Color.GREEN);
+    }
+
+    public void SwapColor() {
+        if(mPaintSquare.getColor() == Color.GREEN){
+             mPaintSquare.setColor(Color.RED);
+        }else if(mPaintSquare.getColor() == Color.RED){
+            mPaintSquare.setColor(Color.BLUE);
+
+        }else if(mPaintSquare.getColor() == Color.BLUE){
+            mPaintSquare.setColor(Color.YELLOW);
+        }else if(mPaintSquare.getColor() == Color.YELLOW) {
+            mPaintSquare.setColor(Color.GREEN);
+        }
+        //mPaintSquare.setColor(mPaintSquare.getColor() == Color.GREEN ? Color.RED : Color.GREEN);
+        postInvalidate();
     }
 
     @Override
@@ -48,7 +64,7 @@ public class ColorView extends View {
         mRectSquare.top = 10;
         mRectSquare.right = mRectSquare.left + SQUARE_SIZE;
         mRectSquare.bottom = mRectSquare.top + SQUARE_SIZE;
-        mPaintSquare.setColor(Color.GREEN);
+
 
         canvas.drawRect(mRectSquare,mPaintSquare);
     }

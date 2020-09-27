@@ -57,9 +57,16 @@
         android:layout_height="115dp" />
 
     <com.example.customviewdemoapplication.Views.ColorView
+        android:id="@+id/colorView"
         android:layout_width="match_parent"
         android:layout_height="78dp"
         tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_swap_color"
+        android:layout_width="wrap_content"
+        android:text="SWAP COLOR"
+        android:layout_height="wrap_content"/>
 
 
 

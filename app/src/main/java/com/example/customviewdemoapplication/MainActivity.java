@@ -2,15 +2,19 @@ package com.example.customviewdemoapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.customviewdemoapplication.Views.ColorView;
 import com.example.customviewdemoapplication.Views.MyView;
 
 public class MainActivity extends AppCompatActivity {
 
     private MyView myView;
+    private ColorView mColorView;
     //private static final String[] COUNTRIES = new String[]{"asdasdas","aasdasd","weqeqwreqewr","asfasgfqasgwqr"};
 
     @Override
@@ -35,7 +39,15 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,COUNTRIES);
         Toast.makeText(MainActivity.this,"sadasd",Toast.LENGTH_LONG).show();
         textView.setAdapter(adapter);*/
+        mColorView = (ColorView) findViewById(R.id.colorView);
 
+        Button btn =(Button) findViewById(R.id.btn_swap_color);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mColorView.SwapColor();
+            }
+        });
 
 
 
