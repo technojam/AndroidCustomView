@@ -52,17 +52,14 @@
         app:bar_width="200dp"/>
 
 
-
     <com.example.customviewdemoapplication.Views.MessageBox
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="115dp" />
 
-    <AutoCompleteTextView
-        android:id="@+id/autoCompleteCountry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="countries name"
-        android:completionThreshold="1"/>
+    <com.example.customviewdemoapplication.Views.ColorView
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        tools:visibility="visible" />
 
 
 

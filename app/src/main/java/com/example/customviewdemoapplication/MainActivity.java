@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Toast;
 
 import com.example.customviewdemoapplication.Views.MyView;
 
 public class MainActivity extends AppCompatActivity {
 
     private MyView myView;
+    //private static final String[] COUNTRIES = new String[]{"asdasdas","aasdasd","weqeqwreqewr","asfasgfqasgwqr"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +28,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });*/
 
-        AutoCompleteTextView textView = (AutoCompleteTextView) findViewById(R.id.autoCompleteCountry); // get a reference to the autocomplete in the layout
+       /* AutoCompleteTextView textView =  findViewById(R.id.autoCompleteCountry); // get a reference to the autocomplete in the layout
 
         String[] countries = getResources().getStringArray(R.array.countries_array);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,countries);
-        textView.setAdapter(adapter);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,COUNTRIES);
+        Toast.makeText(MainActivity.this,"sadasd",Toast.LENGTH_LONG).show();
+        textView.setAdapter(adapter);*/
 
 
 
