@@ -7,6 +7,7 @@ This repository consist of some custom views and UI components for android
 * [RoomTypeView](app/src/main/java/com/example/customviewdemoapplication/Views/RoomTypeView.java)
 * [Progress](app/src/main/java/com/example/customviewdemoapplication/Views/Progress.java)
 * [MyView](app/src/main/java/com/example/customviewdemoapplication/Views/MyView.java)
+* [ColorView](app/src/main/java/com/example/customviewdemoapplication/Views/ColorView.java)
 
 # Screenshot
 <img src="screenshots/ss_1.png">
