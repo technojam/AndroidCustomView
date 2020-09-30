@@ -1,16 +1,16 @@
 ---
 name: Add New View
 about: Suggest an idea for this project
-title: "[NEW View]"
-labels: hacktoberfest
+title: "[NEW VIEW]"
+labels: enhancement, good first issue, hacktoberfest
 assignees: ''
 
 ---
 
-**Title or Name of the custom view**
+### Title or Name of the custom view
 * enter name here
 
-**Describe the view**
+### Description of the view
 A clear and concise description of what you want to happen.
 
 **Possible Approach(If any)**
