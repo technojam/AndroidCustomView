@@ -8,6 +8,7 @@ This repository consist of some custom views and UI components for android
 * [Progress](app/src/main/java/com/example/customviewdemoapplication/Views/Progress.java)
 * [MyView](app/src/main/java/com/example/customviewdemoapplication/Views/MyView.java)
 * [ColorView](app/src/main/java/com/example/customviewdemoapplication/Views/ColorView.java)
+* [CustomAnalogClockView](app/src/main/java/com/example/customviewdemoapplication/Views/CustomAnalogClock.java)
 
 # Screenshot
-<img src="screenshots/ss.png">
+<img src="screenshots/ss2.png">
