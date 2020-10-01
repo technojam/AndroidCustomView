@@ -1,23 +1,31 @@
 package com.example.customviewdemoapplication.Views;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
-import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.annotation.Nullable;
+
+import com.example.customviewdemoapplication.R;
 
 public class Progress extends View {
 
     float mCircleX;
     float mCircleY;
     float sweepAngle = 180;
+    int mTextSize;
+    int default_size = 50;
 
     public Progress(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-
+        TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.Progress);
+        mTextSize = typedArray.getDimensionPixelSize(R.styleable.Progress_text_size, default_size);
+        typedArray.recycle();
     }
 
     @Override
@@ -51,12 +59,12 @@ public class Progress extends View {
         int correction = 200;
         Paint paint2 = new Paint();
         paint2.setColor(Color.BLUE);
-        paint2.setTextSize(50);
+        paint2.setTextSize(mTextSize);
         paint2.setTextAlign(Paint.Align.CENTER);
 
 
 
-        canvas.drawText("75", mCircleX,  mCircleY+100, paint2);
+        canvas.drawText("75", mCircleX,  mCircleY+20, paint2);
 
 
     }

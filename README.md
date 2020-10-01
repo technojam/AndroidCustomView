@@ -10,4 +10,4 @@ This repository consist of some custom views and UI components for android
 * [ColorView](app/src/main/java/com/example/customviewdemoapplication/Views/ColorView.java)
 
 # Screenshot
-<img src="screenshots/ss_1.png">
+<img src="screenshots/ss.png">
