@@ -1,6 +1,9 @@
 package com.example.customviewdemoapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -10,8 +13,13 @@ import android.widget.Toast;
 
 import com.example.customviewdemoapplication.Views.ColorView;
 import com.example.customviewdemoapplication.Views.MyView;
+import com.example.customviewdemoapplication.Views.batteryreviwer;
 
 public class MainActivity extends AppCompatActivity {
+
+    private batteryreviwer mbatteryreciver = new batteryreviwer();
+    private IntentFilter mIntentFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+
 
     private MyView myView;
     private ColorView mColorView;
@@ -34,7 +42,22 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        registerReceiver(mbatteryreciver,mIntentFilter);
 
     }
+
+    @Override
+    protected void onPause() {
+        unregisterReceiver(mbatteryreciver);
+        super.onPause();
+    }
+
+
+
+
 }
