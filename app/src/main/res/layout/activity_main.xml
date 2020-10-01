@@ -11,8 +11,9 @@
     android:orientation="vertical">
 
     <com.example.customviewdemoapplication.Views.Progress
-        android:layout_width="100dp"
-        android:layout_height="100dp" />
+
+        android:layout_width="193dp"
+        android:layout_height="221dp" />
 
 
 

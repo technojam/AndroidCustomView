@@ -56,7 +56,7 @@ public class Progress extends View {
 
 
 
-        canvas.drawText("75", mCircleX,  mCircleY+100, paint2);
+        canvas.drawText("75", mCircleX,  mCircleY+20, paint2);
 
 
     }
