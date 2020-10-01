@@ -68,7 +68,9 @@
         android:text="SWAP COLOR"
         android:layout_height="wrap_content"/>
 
-    
+    <com.example.customviewdemoapplication.Views.CustomAnalogClock
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
 
 
 
