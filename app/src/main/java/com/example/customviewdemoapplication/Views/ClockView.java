@@ -134,7 +134,7 @@ public class ClockView extends View {
         canvas.drawLine(cx,cy,hourPoints[0],hourPoints[1],paint);
 
         for(int hourNum=1, i=0;i<360;i+=30,hourNum++){
-            float[] numberPoints=getHourPoint(cx,cy, (float) (0.8*radius),i+30);
+            float[] numberPoints=getHourPoint(cx,cy, (float) (0.6*radius),i+30);
             canvas.drawText(String.valueOf(hourNum),numberPoints[0],numberPoints[1],textPaint);
         }
     }
