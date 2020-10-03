@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr name="text" format="string"/>
+    <attr name="strokeWidth" format="dimension"/>
+    <attr name="strokeColor" format="color"/>
+    <attr name="textColor" format="color"/>
 
     <declare-styleable name="MyView">
         <attr name="square_color" format="color"/>
@@ -12,9 +16,9 @@
 
 
     <declare-styleable name="RoomTypeView">
-        <attr name="text" format="string"/>
+        <attr name="text"/>
         <attr name="textSize" format="dimension"/>
-        <attr name="textColor" format="color"/>
+        <attr name="textColor"/>
         <attr name="leftGap" format="dimension"/>
         <attr name="textLeftGap" format="dimension"/>
         <attr name="numberPickerRightGap" format="dimension"/>
@@ -34,8 +38,13 @@
         <attr name="margin_right" format="dimension"/>
         <attr name="bar_width" format="dimension"/>
 
+    </declare-styleable>
 
-
+    <declare-styleable name="MessageBox">
+        <attr name="text"/>
+        <attr name="android:strokeWidth"/>
+        <attr name="android:strokeColor"/>
+        <attr name="textColor"/>
     </declare-styleable>
 
 </resources>

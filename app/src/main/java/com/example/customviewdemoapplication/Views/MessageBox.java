@@ -1,14 +1,18 @@
 package com.example.customviewdemoapplication.Views;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Typeface;
-import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.annotation.Nullable;
+
+import com.example.customviewdemoapplication.R;
 
 public class MessageBox extends View {
 
@@ -20,19 +24,30 @@ public class MessageBox extends View {
     int width;
     int height;
 
+    String text;
+    float strokeWidth;
+    int textColor;
+    int strokeColor;
+
     public MessageBox(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.MessageBox);
+        text = typedArray.getString(R.styleable.MessageBox_text);
+        strokeWidth = typedArray.getDimension(R.styleable.MessageBox_android_strokeWidth, 5f);
+        textColor = typedArray.getColor(R.styleable.MessageBox_textColor, Color.GREEN);
+        strokeColor = typedArray.getColor(R.styleable.MessageBox_android_strokeColor, Color.RED);
+        typedArray.recycle();
         init(attrs);
     }
 
     private void init(AttributeSet attrs){
         paint = new Paint();
-        paint.setColor(Color.RED);
-        paint.setStrokeWidth(5);
+        paint.setColor(strokeColor);
+        paint.setStrokeWidth(strokeWidth);
         paint.setStyle(Paint.Style.STROKE);
 
         textPaint = new Paint();
-        textPaint.setColor(Color.GREEN);
+        textPaint.setColor(textColor);
         textPaint.setTextSize(40);
         textPaint.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
 
@@ -53,24 +68,6 @@ public class MessageBox extends View {
 
         path = new Path();
 
-        /*
-        path.lineTo(width-100, 0);
-        path.lineTo(width-100, 100);
-        path.lineTo(0, 100);
-        path.lineTo(0, 0);
-         */
-
-        /*
-        path.addArc(0f, 0f, 0+100, 0+100, 180, 90);
-        path.lineTo(width-100, 0);
-        path.addArc(width-100-50, 0f, width-100+50, 100, 270, 90);
-        path.lineTo(width-100+50, 200);
-        path.addArc(width-100-50, 200-50, width-100+50, 50+200, 0, 90);
-        path.lineTo(50, 200+50);
-        path.addArc(0, 200-50, 100, 200+50, 90, 90);
-        path.lineTo(0, 50);
-
-         */
 
         int w = width-200;
         int h = 100;
@@ -90,6 +87,6 @@ public class MessageBox extends View {
         path.lineTo(0, 50);
 
         canvas.drawPath(path, paint);
-        canvas.drawText("Hello", 50, 50, textPaint);
+        canvas.drawText(text, 50, 50, textPaint);
     }
 }

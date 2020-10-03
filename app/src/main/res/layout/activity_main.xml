@@ -56,7 +56,11 @@
 
     <com.example.customviewdemoapplication.Views.MessageBox
         android:layout_width="match_parent"
-        android:layout_height="115dp" />
+        android:layout_height="115dp"
+        app:text="Hello"
+        android:strokeColor="@color/colorPrimary"
+        android:strokeWidth="5dp"
+        app:textColor="@color/counter_color"/>
 
     <com.example.customviewdemoapplication.Views.ColorView
         android:id="@+id/colorView"
