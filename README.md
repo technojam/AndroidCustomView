@@ -11,4 +11,4 @@ This repository consist of some custom views and UI components for android
 * [CustomAnalogClockView](app/src/main/java/com/example/customviewdemoapplication/Views/CustomAnalogClock.java)
 
 # Screenshot
-<img src="screenshots/ss2.png">
+<img src="screenshots/Screenshot_1601744805.png">
