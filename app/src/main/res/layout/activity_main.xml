@@ -13,6 +13,22 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text=""
+        android:id="@+id/batteryView"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text=""
+        android:id="@+id/batteryStatus"
+        />
+
+
 
     <com.example.customviewdemoapplication.Views.Progress
         android:layout_width="200dp"
@@ -59,7 +75,6 @@
         android:layout_height="115dp"
         app:text="Hello"
         android:strokeColor="@color/colorPrimary"
-        android:strokeWidth="5dp"
         app:textColor="@color/counter_color"/>
 
     <com.example.customviewdemoapplication.Views.ColorView
@@ -77,6 +92,8 @@
     <com.example.customviewdemoapplication.Views.CustomAnalogClock
         android:layout_width="match_parent"
         android:layout_height="150dp" />
+
+
 
 
 </LinearLayout>
