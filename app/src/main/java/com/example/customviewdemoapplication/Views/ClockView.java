@@ -1,4 +1,5 @@
-package com.example.gmart_control;
+package com.example.customviewdemoapplication.Views;
+
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -136,8 +137,6 @@ public class ClockView extends View {
             float[] numberPoints=getHourPoint(cx,cy, (float) (0.8*radius),i+30);
             canvas.drawText(String.valueOf(hourNum),numberPoints[0],numberPoints[1],textPaint);
         }
-
-
     }
 
 
