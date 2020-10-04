@@ -23,7 +23,6 @@ public class ClockView extends View {
     int hours;
     int mins;
     int secs;
-
     int clockStroke;
     Color clockColor;
     int clockBackColor;
