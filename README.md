@@ -9,6 +9,7 @@ This repository consist of some custom views and UI components for android
 * [MyView](app/src/main/java/com/example/customviewdemoapplication/Views/MyView.java)
 * [ColorView](app/src/main/java/com/example/customviewdemoapplication/Views/ColorView.java)
 * [CustomAnalogClockView](app/src/main/java/com/example/customviewdemoapplication/Views/CustomAnalogClock.java)
+* [Alternative Analog ClockView](app/src/main/java/com/example/customviewdemoapplication/Views/ClockView.java)
 
-# Screenshot
 <img src="screenshots/ss2.png">
+
