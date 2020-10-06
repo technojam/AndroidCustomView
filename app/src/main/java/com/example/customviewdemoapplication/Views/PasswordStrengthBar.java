@@ -1,4 +1,4 @@
-package com.android.thenishchalraj.passwordstrength;
+package com.example.customviewdemoapplication;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
