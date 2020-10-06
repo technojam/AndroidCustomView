@@ -4,6 +4,17 @@
     <attr name="strokeWidth" format="dimension"/>
     <attr name="strokeColor" format="color"/>
     <attr name="textColor" format="color"/>
+    
+    
+    <declare-styleable name="password_strength">
+        <attr name="maxProgress" format="integer"/>
+        <attr name="minProgress" format="integer"/>
+        <attr name="bars" format="integer"/>
+        <attr name="strength" format="integer"/>
+        <attr name="defColor" format="color"/>
+
+    </declare-styleable>
+
 
      <declare-styleable name="clock_view">
         <attr name="useSystemTime" format="boolean"/>
