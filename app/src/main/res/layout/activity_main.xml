@@ -13,11 +13,22 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
     <com.example.customviewdemoapplication.Views.Progress
-        android:layout_width="200dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="200dp"
         app:text_size="20sp"/>
+
+    <com.example.customviewdemoapplication.Views.ThermometerView
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+        android:layout_weight="1" />
+</LinearLayout>
 
     <com.example.customviewdemoapplication.Views.RoomTypeView
         android:id="@+id/roomTypeView"
@@ -59,7 +70,6 @@
         android:layout_height="115dp"
         app:text="Hello"
         android:strokeColor="@color/colorPrimary"
-        android:strokeWidth="5dp"
         app:textColor="@color/counter_color"/>
 
     <com.example.customviewdemoapplication.Views.ColorView
