@@ -18,59 +18,64 @@ public class Progress extends View {
     float mCircleX;
     float mCircleY;
     float sweepAngle = 180;
+
     int mTextSize;
-    int default_size = 50;
+
+    private int mTextColor;
+    private int mProgressColor;
+
+    private static final int DEFAULT_TEXT_SIZE = 50;
+    private static final int DEFAULT_TEXT_COLOR = Color.BLACK;
+    private static final int DEFAULT_PROGRESS_COLOR = Color.RED;
 
     public Progress(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.Progress);
-        mTextSize = typedArray.getDimensionPixelSize(R.styleable.Progress_text_size, default_size);
+
+        mTextSize = typedArray.getDimensionPixelSize(R.styleable.Progress_text_size, DEFAULT_TEXT_SIZE);
+
+        mTextColor = typedArray.getColor(R.styleable.Progress_text_color, DEFAULT_TEXT_COLOR);
+        mProgressColor = typedArray.getColor(R.styleable.Progress_progress_color, DEFAULT_PROGRESS_COLOR);
+
         typedArray.recycle();
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        mCircleX = getWidth()/2;
-        mCircleY = getWidth()/2;
+        mCircleX = getWidth() / 2.f;
+        mCircleY = getWidth() / 2.f;
+
         Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setStrokeWidth(50);
         paint.setStyle(Paint.Style.STROKE);
         paint.setColor(Color.GRAY);
 
-        canvas.drawCircle(mCircleX, mCircleY, getWidth()/3,  paint);
+        canvas.drawCircle(mCircleX, mCircleY, getWidth() / 3.f,  paint);
 
         Paint paint1 = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint1.setStrokeWidth(50);
         paint1.setStyle(Paint.Style.STROKE);
-        paint1.setColor(Color.RED);
+        paint1.setColor(mProgressColor);
         paint1.setStrokeCap(Paint.Cap.ROUND);
 
         RectF rect = new RectF();
-        rect.top = mCircleX - getWidth()/3;
-        rect.left = mCircleX - getWidth()/3;
-        rect.bottom = mCircleY + getWidth()/3;
-        rect.right = mCircleY + getWidth()/3;
-
-        //canvas.drawRect(rect, paint1);
+        rect.top = mCircleX - getWidth() / 3.f;
+        rect.left = mCircleX - getWidth() / 3.f;
+        rect.bottom = mCircleY + getWidth() / 3.f;
+        rect.right = mCircleY + getWidth() / 3.f;
 
         canvas.drawArc(rect, 270, sweepAngle, false, paint1);
 
-        int correction = 200;
         Paint paint2 = new Paint();
-        paint2.setColor(Color.BLUE);
+        paint2.setColor(mTextColor);
         paint2.setTextSize(mTextSize);
         paint2.setTextAlign(Paint.Align.CENTER);
 
-
-
         canvas.drawText("75", mCircleX,  mCircleY+20, paint2);
-
-
     }
 
     /*
-
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         boolean value = super.onTouchEvent(event);
@@ -98,6 +103,6 @@ public class Progress extends View {
 
         }
         return value;
-    }*/
-
+    }
+    */
 }

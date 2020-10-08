@@ -12,6 +12,8 @@
 
     <declare-styleable name="Progress">
         <attr name="text_size" format="dimension"/>
+        <attr name="text_color" format="color"/>
+        <attr name="progress_color" format="color"/>
     </declare-styleable>
 
 

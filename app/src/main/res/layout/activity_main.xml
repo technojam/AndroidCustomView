@@ -1,84 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<LinearLayout
 
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:ignore="ResAuto"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    <LinearLayout
 
-
-    <com.example.customviewdemoapplication.Views.Progress
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        app:text_size="20sp"/>
-
-    <com.example.customviewdemoapplication.Views.RoomTypeView
-        android:id="@+id/roomTypeView"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        app:leftGap="20dp"
-        app:text="HELLO"
-        app:textSize="20sp"
-        app:textLeftGap="20dp"
-        app:textColor="#7C7070"
-        app:counterTextColor="#000000"
-        app:numberPickerRightGap="-10dp"/>
-
-    <!--
-    <Button
-        android:id="@+id/getButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/roomTypeView"
-        android:text="Get"/>-->
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        tools:ignore="ResAuto">
 
 
-    <com.example.customviewdemoapplication.Views.ReviewBarView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:bgColor="#000000"
-        app:fgColor="@color/colorPrimary"
-        app:percentage="50"
-        app:margin_left="12dp"
-        app:margin_right="70dp"
-        app:string_start="Excellent"
-        app:string_end="300"
-        app:string_color="@color/colorPrimaryDark"
-        app:bar_width="200dp"/>
+        <com.example.customviewdemoapplication.Views.Progress
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:text_color="@color/colorPrimaryDark"
+            app:progress_color="@color/colorProgress"
+            app:text_size="20sp" />
+
+        <com.example.customviewdemoapplication.Views.RoomTypeView
+            android:id="@+id/roomTypeView"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            app:counterTextColor="#000000"
+            app:leftGap="20dp"
+            app:numberPickerRightGap="-10dp"
+            app:text="HELLO"
+            app:textColor="#7C7070"
+            app:textLeftGap="20dp"
+            app:textSize="20sp" />
+
+        <com.example.customviewdemoapplication.Views.ReviewBarView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:bar_width="200dp"
+            app:bgColor="#000000"
+            app:fgColor="@color/colorPrimary"
+            app:margin_left="12dp"
+            app:margin_right="70dp"
+            app:percentage="50"
+            app:string_color="@color/colorPrimaryDark"
+            app:string_end="300"
+            app:string_start="Excellent" />
 
 
-    <com.example.customviewdemoapplication.Views.MessageBox
-        android:layout_width="match_parent"
-        android:layout_height="115dp"
-        app:text="Hello"
-        android:strokeColor="@color/colorPrimary"
-        android:strokeWidth="5dp"
-        app:textColor="@color/counter_color"/>
+        <com.example.customviewdemoapplication.Views.MessageBox
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:strokeWidth="5"
+            android:strokeColor="@color/colorPrimary"
+            app:text="Hello"
+            app:textColor="@color/colorCounter" />
 
-    <com.example.customviewdemoapplication.Views.ColorView
-        android:id="@+id/colorView"
-        android:layout_width="match_parent"
-        android:layout_height="78dp"
-        tools:visibility="visible" />
+        <com.example.customviewdemoapplication.Views.ColorView
+            android:id="@+id/colorView"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            tools:visibility="visible" />
 
-    <Button
-        android:id="@+id/btn_swap_color"
-        android:layout_width="wrap_content"
-        android:text="SWAP COLOR"
-        android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_swap_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SWAP COLOR" />
 
-    <com.example.customviewdemoapplication.Views.CustomAnalogClock
-        android:layout_width="match_parent"
-        android:layout_height="150dp" />
+        <com.example.customviewdemoapplication.Views.CustomAnalogClock
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
 
 
-</LinearLayout>
+    </LinearLayout>
 </ScrollView>
 
