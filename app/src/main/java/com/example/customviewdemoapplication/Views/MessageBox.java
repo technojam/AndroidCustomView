@@ -32,10 +32,12 @@ public class MessageBox extends View {
     public MessageBox(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.MessageBox);
+
         text = typedArray.getString(R.styleable.MessageBox_text);
         strokeWidth = typedArray.getFloat(R.styleable.MessageBox_android_strokeWidth, 5f);
         textColor = typedArray.getColor(R.styleable.MessageBox_textColor, Color.GREEN);
         strokeColor = typedArray.getColor(R.styleable.MessageBox_android_strokeColor, Color.RED);
+
         typedArray.recycle();
         init(attrs);
     }

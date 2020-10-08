@@ -19,8 +19,7 @@ public class Progress extends View {
     float mCircleY;
     float sweepAngle = 180;
 
-    int mTextSize;
-
+    private int mTextSize;
     private int mTextColor;
     private int mProgressColor;
 
@@ -32,9 +31,9 @@ public class Progress extends View {
         super(context, attrs);
         TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.Progress);
 
-        mTextSize = typedArray.getDimensionPixelSize(R.styleable.Progress_text_size, DEFAULT_TEXT_SIZE);
+        mTextSize = typedArray.getDimensionPixelSize(R.styleable.Progress_android_textSize, DEFAULT_TEXT_SIZE);
+        mTextColor = typedArray.getColor(R.styleable.Progress_android_textColor, DEFAULT_TEXT_COLOR);
 
-        mTextColor = typedArray.getColor(R.styleable.Progress_text_color, DEFAULT_TEXT_COLOR);
         mProgressColor = typedArray.getColor(R.styleable.Progress_progress_color, DEFAULT_PROGRESS_COLOR);
 
         typedArray.recycle();
@@ -74,35 +73,4 @@ public class Progress extends View {
 
         canvas.drawText("75", mCircleX,  mCircleY+20, paint2);
     }
-
-    /*
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        boolean value = super.onTouchEvent(event);
-        switch (event.getAction()){
-            case MotionEvent.ACTION_DOWN:
-                return true;
-            case MotionEvent.ACTION_MOVE:
-                Toast.makeText(getContext(), "Click", Toast.LENGTH_SHORT).show();
-                float x = getX();
-                float y = getY();
-
-                double dx = Math.pow(x - mCircleX, 2);
-                double dy = Math.pow(y - mCircleY, 2);
-
-                if(dy + dx < Math.pow(getWidth()/3, 2)+100 & dy + dx > Math.pow(getWidth()/3, 2)-100){
-                    Toast.makeText(getContext(), "Click inside", Toast.LENGTH_SHORT).show();
-
-                    sweepAngle += 10;
-
-                    postInvalidate();
-                    return true;
-
-                }
-                return value;
-
-        }
-        return value;
-    }
-    */
 }
