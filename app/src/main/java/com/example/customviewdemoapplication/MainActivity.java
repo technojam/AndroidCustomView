@@ -13,16 +13,30 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.customviewdemoapplication.Views.ColorView;
+import com.example.customviewdemoapplication.Views.MyView;
 import com.example.customviewdemoapplication.Views.password_strength.PasswordStrength;
 import com.example.customviewdemoapplication.Views.password_strength.PasswordStrengthBar;
 import com.example.customviewdemoapplication.Views.password_strength.PasswordStrengthChangeListener;
 
 public class MainActivity extends AppCompatActivity {
 
+    private MyView myView;
+    private ColorView mColorView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mColorView = (ColorView) findViewById(R.id.colorView);
+
+        Button btn =(Button) findViewById(R.id.btn_swap_color);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mColorView.SwapColor();
+            }
+        });
 
         final TextView textView = findViewById(R.id.textView);
 
