@@ -59,7 +59,7 @@
         android:layout_height="115dp"
         app:text="Hello"
         android:strokeColor="@color/colorPrimary"
-        android:strokeWidth="5dp"
+        android:strokeWidth="1"
         app:textColor="@color/counter_color"/>
 
     <com.example.customviewdemoapplication.Views.ColorView
