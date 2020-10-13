@@ -17,8 +17,8 @@
         <com.example.customviewdemoapplication.Views.Progress
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="32sp"
+            app:textColor="@color/colorPrimaryDark"
+            app:textSize="32sp"
             app:progress_color="@color/colorProgress" />
 
         <com.example.customviewdemoapplication.Views.RoomTypeView

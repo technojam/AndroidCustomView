@@ -31,8 +31,8 @@ public class Progress extends View {
         super(context, attrs);
         TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.Progress);
 
-        mTextSize = typedArray.getDimensionPixelSize(R.styleable.Progress_android_textSize, DEFAULT_TEXT_SIZE);
-        mTextColor = typedArray.getColor(R.styleable.Progress_android_textColor, DEFAULT_TEXT_COLOR);
+        mTextSize = typedArray.getDimensionPixelSize(R.styleable.Progress_textSize, DEFAULT_TEXT_SIZE);
+        mTextColor = typedArray.getColor(R.styleable.Progress_textColor, DEFAULT_TEXT_COLOR);
 
         mProgressColor = typedArray.getColor(R.styleable.Progress_progress_color, DEFAULT_PROGRESS_COLOR);
 
