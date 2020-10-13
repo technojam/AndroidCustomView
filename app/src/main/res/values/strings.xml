@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">CustomViewDemoApplication</string>
+
+    <string name="hint_enter_password">Enter Password</string>
+    <string name="button_swap_color">SWAP COLOR</string>
+
     <string-array name="countries_array">
         <item>Afghanistan</item>
         <item>Albania</item>
