@@ -4,7 +4,8 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
-    <color name="counter_color">#000</color>
+    <color name="colorCounter">#000</color>
+    <color name="colorProgress">#00FF18</color>
 
     <color name="grey">#E5E5E5</color>
 </resources>

@@ -2,6 +2,9 @@
 <resources>
     <attr name="strokeWidth" format="dimension"/>
     <attr name="strokeColor" format="color"/>
+    <attr name="textColor" format="color"/>
+    <attr name="textSize" format="dimension"/>
+    <attr name="text" format="string"/>
 
     <declare-styleable name="MyView">
         <attr name="square_color" format="color"/>
@@ -9,23 +12,23 @@
     </declare-styleable>
 
     <declare-styleable name="Progress">
-        <attr name="text_size" format="dimension"/>
+        <attr name="textColor"/>
+        <attr name="textSize"/>
+        <attr name="progress_color" format="color"/>
     </declare-styleable>
 
 
     <declare-styleable name="RoomTypeView">
-        <attr name="text" format="string"/>
-        <attr name="textSize" format="dimension"/>
-        <attr name="textColor" format="color"/>
+        <attr name="text"/>
+        <attr name="textSize"/>
+        <attr name="textColor"/>
         <attr name="leftGap" format="dimension"/>
         <attr name="textLeftGap" format="dimension"/>
         <attr name="numberPickerRightGap" format="dimension"/>
         <attr name="counterTextColor" format="color"/>
-
     </declare-styleable>
 
     <declare-styleable name="ReviewBarView">
-
         <attr name="string_start" format="string"/>
         <attr name="string_end" format="string"/>
         <attr name="string_color" format="color"/>
@@ -35,7 +38,6 @@
         <attr name="margin_left" format="dimension"/>
         <attr name="margin_right" format="dimension"/>
         <attr name="bar_width" format="dimension"/>
-
     </declare-styleable>
 
     <declare-styleable name="MessageBox">
@@ -46,10 +48,10 @@
     </declare-styleable>
 
     <declare-styleable name="PasswordStrengthBar">
-        <attr name="password" format="string" />
-        <attr name="cornerRadius" format="dimension"  />
-        <attr name="minLength" format="integer"  />
-        <attr name="maxLength" format="integer"  />
+        <attr name="password" format="string"/>
+        <attr name="cornerRadius" format="dimension"/>
+        <attr name="minLength" format="integer"/>
+        <attr name="maxLength" format="integer"/>
     </declare-styleable>
 
 </resources>
